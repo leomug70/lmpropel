@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>LM Propel – Réalisations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Réalisations LM Propel : site de gestion d'équipe de football et Assistant Football, des outils web utilisés sur le terrain.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LM Propel">
+<meta property="og:title" content="LM Propel – Réalisations">
+<meta property="og:description" content="Réalisations LM Propel : site de gestion d'équipe de football et Assistant Football, des outils web utilisés sur le terrain.">
+<meta property="og:url" content="https://leomug70.github.io/lmpropel/Realisations.dc.html">
+<meta property="og:image" content="https://leomug70.github.io/lmpropel/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="./assets/b91b5f40b154a55543d94a27709189d6.svg">
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+<link rel="stylesheet" href="./assets/3a651c1ec16219c23ceb9ee704067a24.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div style="background: #FFFFFF; color: #334155; font-family: Inter, system-ui, sans-serif; font-size: 18px; line-height: 1.7; overflow-x: hidden">
+<dc-import name="Header" current="realisations" hint-size="100%,76px"></dc-import>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: clamp(56px, 9vw, 112px) 24px 32px">
+<p class="reveal" style="color: #2F5BEA; font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase">Réalisations</p>
+<h1 class="reveal d1" style="font-size: clamp(36px, 5.5vw, 58px); line-height: 1.1; margin-top: 16px; max-width: 760px">Des outils déjà utilisés sur le terrain.</h1>
+<p class="reveal d2" style="margin-top: 20px; max-width: 600px; font-size: clamp(18px, 2.2vw, 20px); color: #475569">Chaque projet part d'un vrai besoin : gagner du temps, être mieux organisé, être trouvé en ligne.</p>
+</section>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: 48px 24px clamp(72px, 10vw, 120px); display: flex; flex-direction: column; gap: clamp(56px, 8vw, 96px)">
+<sc-for list="{{projects}}" as="p" hint-placeholder-count="2">
+<div class="{{p.anim}}" style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px; flex-direction: {{p.dir}}">
+<div class="tilt" style="flex: 1 1 420px; min-width: 0; aspect-ratio: 4 / 3; background: {{p.bg}}; border: 1px solid #E2E8F0; border-radius: 24px; display: flex; flex-direction: column; gap: 14px; align-items: center; justify-content: center; color: #64748B; font-size: 15px; font-weight: 500"><sc-if value="{{p.isTeam}}" hint-placeholder-val="{{ true }}"><div aria-hidden="true" style="width: 82%; background: #FFFFFF; border-radius: 16px; box-shadow: 0 20px 40px rgba(15,23,42,0.12); padding: 20px; font-size: 13px; color: #0F172A; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center"><strong style="font-family: 'Space Grotesk', sans-serif; font-size: 16px">Prochain match</strong><span style="background: #DCFCE7; color: #15803D; font-weight: 600; padding: 3px 10px; border-radius: 999px">Dim. 15 h</span></div>
+<div style="display: flex; justify-content: space-between; background: #F1F5F9; border-radius: 10px; padding: 10px 14px; font-weight: 600"><span>Mon équipe</span><span style="color: #64748B">vs</span><span>Adversaire</span></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<span class="popin" style="background: #EEF2FF; border-radius: 8px; padding: 8px 10px">Gardien · 1</span><span class="popin" style="animation-delay: .15s; background: #EEF2FF; border-radius: 8px; padding: 8px 10px">Défense · 4</span><span class="popin" style="animation-delay: .3s; background: #EEF2FF; border-radius: 8px; padding: 8px 10px">Milieu · 3</span><span class="popin" style="animation-delay: .45s; background: #EEF2FF; border-radius: 8px; padding: 8px 10px">Attaque · 3</span>
+</div>
+<div style="height: 8px; background: #E2E8F0; border-radius: 999px; overflow: hidden"><div class="build" style="height: 100%; width: 100%; background: #2F5BEA"></div></div>
+<span style="color: #64748B">Convocations envoyées</span>
+</div></sc-if>
+<sc-if value="{{p.isAssistant}}" hint-placeholder-val="{{ false }}"><div aria-hidden="true" style="width: 82%; background: #FFFFFF; border-radius: 16px; box-shadow: 0 20px 40px rgba(15,23,42,0.12); padding: 20px; font-size: 13px; display: flex; flex-direction: column; gap: 10px">
+<div class="notif" style="align-self: flex-end; max-width: 80%; background: #2F5BEA; color: #FFFFFF; padding: 10px 14px; border-radius: 14px 14px 4px 14px">Prépare-moi une séance de 1 h sur la relance.</div>
+<div class="notif" style="animation-delay: 1.2s; align-self: flex-start; max-width: 85%; background: #F1F5F9; color: #0F172A; padding: 10px 14px; border-radius: 14px 14px 14px 4px">Échauffement 15 min, jeu réduit 4 contre 4, puis match à thème…</div>
+<div style="display: flex; gap: 5px; padding: 4px 6px"><span class="pulse" style="width: 7px; height: 7px; border-radius: 50%; background: #94A3B8"></span><span class="pulse" style="animation-delay: .2s; width: 7px; height: 7px; border-radius: 50%; background: #94A3B8"></span><span class="pulse" style="animation-delay: .4s; width: 7px; height: 7px; border-radius: 50%; background: #94A3B8"></span></div>
+</div></sc-if></div>
+<div style="flex: 1 1 360px; min-width: 0">
+<p style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: {{p.tagColor}}"><span class="bounce" style="width: 38px; height: 38px; border-radius: 12px; background: {{p.bg}}; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{p.tagColor}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{p.icon}}"></path></svg></span>{{p.tag}}</p>
+<h2 style="font-size: clamp(28px, 4vw, 38px); line-height: 1.15; margin-top: 10px">{{p.title}}</h2>
+<p style="margin-top: 16px; color: #475569">{{p.text}}</p>
+<div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{p.chips}}" as="c" hint-placeholder-count="3">
+<span style="background: #F1F5F9; color: #334155; font-size: 14px; font-weight: 500; padding: 6px 14px; border-radius: 999px">{{c}}</span>
+</sc-for>
+</div>
+</div>
+</div>
+</sc-for>
+</section>
+
+<section style="background: #F8FAFC; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0; margin-bottom: clamp(72px, 10vw, 120px)">
+<div style="max-width: 1120px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) 24px">
+<p class="sr" style="color: #2F5BEA; font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase">Sites de démonstration</p>
+<h2 class="sr" style="font-size: clamp(30px, 4.5vw, 44px); line-height: 1.15; margin-top: 12px">Voyez ce que je ferais pour vous.</h2>
+<p class="sr" style="margin-top: 12px; color: #475569; max-width: 620px">Trois exemples complets, pour des entreprises fictives. Cliquez, testez la commande, l'inscription ou la réservation.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 48px">
+<a class="tilt sr-zoom" href="DemoBoulangerie.dc.html" style="display: block; text-decoration: none; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 22px; overflow: hidden; color: #0F172A">
+<div style="height: 170px; background: #FBF5EC; display: flex; align-items: center; justify-content: center"><svg class="float ic-hover" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#7C2D12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l2-5h14l2 5 M4 9v11h16V9 M3 9h18 M9 20v-6h6v6"></path></svg></div>
+<div style="padding: 24px"><p style="font-size: 14px; font-weight: 600; color: #7C2D12">Boulangerie</p><h3 style="font-size: 22px; margin-top: 4px">Le Fournil Doré</h3><p style="margin-top: 8px; color: #475569; font-size: 16px">Commande en ligne avec retrait en boutique.</p><p style="margin-top: 14px; font-weight: 600; color: #2F5BEA">Voir la démo <span class="arrow-go">→</span></p></div>
+</a>
+<a class="tilt sr-zoom" href="DemoClub.dc.html" style="display: block; text-decoration: none; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 22px; overflow: hidden; color: #0F172A">
+<div style="height: 170px; background: #ECFDF5; display: flex; align-items: center; justify-content: center"><svg class="float ic-hover" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18 M12 7l4 3-1.5 4.5h-5L8 10z"></path></svg></div>
+<div style="padding: 24px"><p style="font-size: 14px; font-weight: 600; color: #047857">Club de foot</p><h3 style="font-size: 22px; margin-top: 4px">FC Les Étoiles</h3><p style="margin-top: 8px; color: #475569; font-size: 16px">Matchs, équipes et inscription en ligne.</p><p style="margin-top: 14px; font-weight: 600; color: #2F5BEA">Voir la démo <span class="arrow-go">→</span></p></div>
+</a>
+<a class="tilt sr-zoom" href="DemoCoiffure.dc.html" style="display: block; text-decoration: none; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 22px; overflow: hidden; color: #0F172A">
+<div style="height: 170px; background: #FCEEF0; display: flex; align-items: center; justify-content: center"><svg class="float ic-hover" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#9F1239" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6a3 3 0 1 0 0 .01 M6 18a3 3 0 1 0 0 .01 M8.5 7.5 20 18 M8.5 16.5 20 6"></path></svg></div>
+<div style="padding: 24px"><p style="font-size: 14px; font-weight: 600; color: #9F1239">Salon de coiffure</p><h3 style="font-size: 22px; margin-top: 4px">Atelier Lumière</h3><p style="margin-top: 8px; color: #475569; font-size: 16px">Tarifs et prise de rendez-vous en ligne.</p><p style="margin-top: 14px; font-weight: 600; color: #2F5BEA">Voir la démo <span class="arrow-go">→</span></p></div>
+</a>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: 0 24px clamp(72px, 10vw, 120px)">
+<div class="sr" style="border: 2px dashed #C7D2FE; border-radius: 28px; padding: clamp(40px, 7vw, 72px); text-align: center; background: #F8FAFF">
+<div class="bounce" style="width: 64px; height: 64px; margin: 0 auto 20px; border-radius: 18px; background: #2F5BEA; display: flex; align-items: center; justify-content: center"><svg class="" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"></path></svg></div>
+<h2 style="font-size: clamp(28px, 4vw, 38px)">Votre projet ici ?</h2>
+<p style="margin: 14px auto 0; max-width: 520px; color: #475569">Les 2 premiers clients profitent de -50 % en échange d'un avis et de l'accord pour montrer leur site.</p>
+<a class="btn shine" href="Contact.dc.html" style="display: inline-block; margin-top: 32px; background: #2F5BEA; color: #FFFFFF; font-weight: 600; padding: 16px 30px; border-radius: 12px; text-decoration: none">Parlons-en</a>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":3610}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      projects: [
+        { dir: 'row', anim: 'sr-left', isTeam: true, isAssistant: false, icon: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18 M12 7l4 3-1.5 4.5h-5L8 10z', bg: '#EEF2FF', tag: 'Club de football', tagColor: '#2F5BEA', title: "Site de gestion d'une équipe", text: "Effectif, matchs et compositions réunis au même endroit, accessibles par tout le staff depuis le téléphone. Fini les tableaux éparpillés et les messages perdus.", chips: ['Site web', 'Adapté au téléphone', 'Gestion d’équipe'] },
+        { dir: 'row-reverse', anim: 'sr-right', isTeam: false, isAssistant: true, icon: 'M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z', bg: '#ECFDF5', tag: 'Outil pour coachs', tagColor: '#047857', title: 'Assistant Football', text: "Un assistant intelligent qui aide les coachs à préparer leurs séances et leurs matchs. Un exemple concret de ce que l'IA peut apporter à une association.", chips: ['Intelligence artificielle', 'Automatisation', 'Sport amateur'] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

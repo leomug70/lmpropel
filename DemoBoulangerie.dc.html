@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Démo – Boulangerie Le Fournil Doré</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+<link rel="stylesheet" href="./assets/3a651c1ec16219c23ceb9ee704067a24.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div style="background: #FBF5EC; color: #44291A; font-family: Inter, system-ui, sans-serif; font-size: 18px; line-height: 1.7; overflow-x: hidden">
+<a href="Realisations.dc.html" style="display: block; background: #0F172A; color: #FFFFFF; text-align: center; font-size: 14px; font-weight: 600; padding: 10px 16px; text-decoration: none">Site de démonstration réalisé par LM Propel · entreprise fictive · ← retour</a>
+
+<header style="max-width: 1120px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<span style="font-family: Fraunces, serif; font-weight: 800; font-size: 26px; color: #7C2D12">Le Fournil Doré</span>
+<nav style="display: flex; flex-wrap: wrap; gap: 8px 26px; font-size: 16px; font-weight: 500"><a href="#produits" style="color: #44291A; text-decoration: none">Nos produits</a><a href="#horaires" style="color: #44291A; text-decoration: none">Horaires</a><a href="#commande" style="color: #44291A; text-decoration: none">Commander</a></nav>
+</header>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: clamp(40px, 8vw, 96px) 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 420px; min-width: 0">
+<p class="reveal" style="color: #B45309; font-weight: 600; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase">Boulangerie artisanale · depuis 1998</p>
+<h1 class="reveal d1" style="font-family: Fraunces, serif; font-weight: 800; color: #44291A; font-size: clamp(40px, 6vw, 68px); line-height: 1.05; margin-top: 16px">Du bon pain, cuit chaque matin à 5 h.</h1>
+<p class="reveal d2" style="margin-top: 22px; color: #6B4A36; max-width: 480px">Baguettes de tradition, viennoiseries pur beurre et pâtisseries maison. Commandez la veille, récupérez sans attendre.</p>
+<div class="reveal d3" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px">
+<a class="btn shine full-sm" href="#commande" style="background: #7C2D12; color: #FFFFFF; font-weight: 600; padding: 16px 28px; border-radius: 999px; text-decoration: none">Commander en ligne</a>
+<a class="btn full-sm" href="#horaires" style="border: 1.5px solid #7C2D12; color: #7C2D12; font-weight: 600; padding: 16px 28px; border-radius: 999px; text-decoration: none">Voir les horaires</a>
+</div>
+</div>
+<div class="reveal d2" style="flex: 1 1 340px; min-width: 0; display: flex; justify-content: center" aria-hidden="true">
+<div class="float" style="width: 100%; max-width: 380px; aspect-ratio: 1; border-radius: 50%; background: #F3D9B1; display: flex; align-items: center; justify-content: center">
+<svg width="62%" viewBox="0 0 200 120"><ellipse cx="100" cy="64" rx="92" ry="44" fill="#C2410C"></ellipse><ellipse cx="100" cy="56" rx="86" ry="38" fill="#D97706"></ellipse><path d="M40 46 q12 -14 26 0 M80 38 q12 -14 26 0 M120 38 q12 -14 26 0" stroke="#FDE68A" stroke-width="6" fill="none" stroke-linecap="round"></path></svg>
+</div>
+</div>
+</section>
+
+<section id="produits" style="background: #FFFFFF">
+<div style="max-width: 1120px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px">
+<h2 class="sr" style="font-family: Fraunces, serif; font-weight: 800; color: #44291A; font-size: clamp(30px, 4.5vw, 44px)">Nos incontournables</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 44px">
+<sc-for list="{{products}}" as="p" hint-placeholder-count="6">
+<div class="tilt sr-zoom" style="background: #FBF5EC; border: 1px solid #EBD9C3; border-radius: 22px; padding: 28px">
+<div style="width: 54px; height: 54px; border-radius: 50%; background: {{p.color}}"></div>
+<h3 style="font-family: Fraunces, serif; font-weight: 600; color: #44291A; font-size: 22px; margin-top: 18px">{{p.name}}</h3>
+<p style="margin-top: 6px; color: #6B4A36; font-size: 16px">{{p.desc}}</p>
+<p style="margin-top: 14px; font-weight: 600; color: #7C2D12">{{p.price}}</p>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="horaires" style="max-width: 1120px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 320px; min-width: 0">
+<h2 class="sr" style="font-family: Fraunces, serif; font-weight: 800; color: #44291A; font-size: clamp(30px, 4.5vw, 44px)">Horaires</h2>
+<div class="sr" style="margin-top: 28px; background: #FFFFFF; border-radius: 20px; padding: 10px 28px">
+<sc-for list="{{hours}}" as="h" hint-placeholder-count="4">
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #F1E4D3"><span>{{h.d}}</span><span style="font-weight: 600">{{h.t}}</span></div>
+</sc-for>
+</div>
+</div>
+<div style="flex: 1 1 320px; min-width: 0">
+<h2 class="sr" style="font-family: Fraunces, serif; font-weight: 800; color: #44291A; font-size: clamp(30px, 4.5vw, 44px)">Nous trouver</h2>
+<div class="sr" style="margin-top: 28px; height: 220px; border-radius: 20px; background: #EAD7BE; position: relative; overflow: hidden" aria-hidden="true">
+<div style="position: absolute; left: 0; right: 0; top: 46%; height: 18px; background: #F8EEDF"></div><div style="position: absolute; top: 0; bottom: 0; left: 58%; width: 18px; background: #F8EEDF"></div>
+<svg class="bounce" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: calc(58% - 11px); top: calc(46% - 34px)"><path d="M12 22s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z" fill="#7C2D12"></path><circle cx="12" cy="10" r="2.5" fill="#FFFFFF"></circle></svg>
+</div>
+<p style="margin-top: 16px; color: #6B4A36">12 rue de la Gare · Votre ville · <a href="tel:+33600000000" style="color: #7C2D12; font-weight: 600">06 00 00 00 00</a></p>
+</div>
+</section>
+
+<section id="commande" style="background: #7C2D12; color: #FFFFFF">
+<div style="max-width: 760px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px; text-align: center">
+<h2 class="sr" style="font-family: Fraunces, serif; font-weight: 800; color: #FFFFFF; font-size: clamp(30px, 4.5vw, 44px)">Commandez, on vous le prépare.</h2>
+<p class="sr" style="margin-top: 12px; color: #FDE7D3">Choisissez vos produits et votre heure de passage. Exemple d'automatisation : la commande part directement dans un tableau Google Sheets et un SMS confirme le retrait.</p>
+<div class="sr" style="margin-top: 36px; background: #FFFFFF; color: #44291A; border-radius: 22px; padding: 28px; text-align: left; display: flex; flex-direction: column; gap: 14px">
+<sc-for list="{{cart}}" as="c" hint-placeholder-count="3">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span>{{c.name}} <span style="color: #8A6A55">· {{c.unit}}</span></span>
+<div style="display: flex; align-items: center; gap: 10px">
+<button type="button" onClick="{{c.minus}}" aria-label="Retirer : {{c.name}}" style="width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #EBD9C3; background: #FFFFFF; color: #7C2D12; font-size: 20px; cursor: pointer">−</button>
+<span style="min-width: 22px; text-align: center; font-weight: 600">{{c.qty}}</span>
+<button type="button" onClick="{{c.plus}}" aria-label="Ajouter : {{c.name}}" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: #7C2D12; color: #FFFFFF; font-size: 20px; cursor: pointer">+</button>
+</div>
+</div>
+</sc-for>
+<div style="display: flex; justify-content: space-between; border-top: 1px solid #F1E4D3; padding-top: 16px; font-weight: 600; font-size: 20px"><span>Total</span><span>{{total}}</span></div>
+<button class="btn shine" type="button" onClick="{{order}}" style="background: #7C2D12; color: #FFFFFF; border: 0; border-radius: 999px; padding: 16px; font-size: 17px; font-weight: 600; cursor: pointer">{{orderLabel}}</button>
+</div>
+</div>
+</section>
+
+<footer style="text-align: center; padding: 36px 24px 100px; font-size: 14px; color: #8A6A55">Le Fournil Doré est une boulangerie fictive. Site de démonstration créé par <a href="Main.dc.html" style="color: #7C2D12; font-weight: 600">LM Propel</a>.</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":3300}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { q: [2, 1, 0], done: false }; }
+  renderVals() {
+    const items = [{ name: 'Baguette tradition', unit: '1,30 €', p: 1.3 }, { name: 'Croissant pur beurre', unit: '1,20 €', p: 1.2 }, { name: 'Tarte aux pommes', unit: '16 €', p: 16 }];
+    const q = this.state.q;
+    const total = items.reduce((s, it, i) => s + it.p * q[i], 0);
+    const set = (i, d) => () => { const n = q.slice(); n[i] = Math.max(0, n[i] + d); this.setState({ q: n, done: false }); };
+    return {
+      products: [
+        { name: 'Baguette tradition', desc: 'Farine Label Rouge, pousse lente 24 h.', price: '1,30 €', color: '#D97706' },
+        { name: 'Croissant pur beurre', desc: 'Feuilleté maison, beurre AOP.', price: '1,20 €', color: '#F59E0B' },
+        { name: 'Pain de campagne', desc: 'Au levain naturel, croûte épaisse.', price: '4,50 €', color: '#92400E' },
+        { name: 'Pain au chocolat', desc: 'Deux barres de chocolat noir.', price: '1,40 €', color: '#78350F' },
+        { name: 'Tarte aux pommes', desc: 'Pour 6 personnes, sur commande.', price: '16 €', color: '#FBBF24' },
+        { name: 'Éclair au café', desc: 'Crème pâtissière au café torréfié.', price: '3,20 €', color: '#B45309' }
+      ],
+      hours: [{ d: 'Mardi – Vendredi', t: '6 h 30 – 19 h 30' }, { d: 'Samedi', t: '6 h 30 – 19 h' }, { d: 'Dimanche', t: '7 h – 13 h' }, { d: 'Lundi', t: 'Fermé' }],
+      cart: items.map((it, i) => ({ ...it, qty: q[i], minus: set(i, -1), plus: set(i, 1) })),
+      total: total.toFixed(2).replace('.', ',') + ' €',
+      orderLabel: this.state.done ? 'Commande reçue ! Retrait demain dès 7 h' : 'Valider ma commande (démo)',
+      order: () => this.setState({ done: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

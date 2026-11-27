@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>En-tête LM Propel</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+<link rel="stylesheet" href="./assets/3a651c1ec16219c23ceb9ee704067a24.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<header class="drop" style="position: relative; background: rgba(255,255,255,0.96); border-bottom: 1px solid #E2E8F0; font-family: Inter, system-ui, sans-serif">
+<nav style="max-width: 1120px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a class="logo-hover" href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none">
+<svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#2F5BEA"></rect><path d="M26 47 H15 V19 L28 34 L44 15" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path><path class="logo-arrow" d="M34 15 H44 V25" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="47" cy="46" r="4" fill="#FF8A3D"></circle></svg>
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 21px; color: #0F172A; white-space: nowrap; letter-spacing: -0.02em">LM<span style="color: #2F5BEA"> Propel</span></span>
+</a>
+<div class="hide-nav nav-tight" style="display: flex; align-items: center; gap: 32px; font-size: 16px; white-space: nowrap">
+<sc-for list="{{links}}" as="l" hint-placeholder-count="4">
+<a class="navlink" href="{{l.href}}" style="text-decoration: none; color: {{l.color}}; font-weight: {{l.weight}}">{{l.label}}</a>
+</sc-for>
+<a class="btn shine" href="Contact.dc.html" style="background: #2F5BEA; color: #FFFFFF; font-weight: 600; padding: 11px 20px; border-radius: 10px; text-decoration: none">Devis gratuit <span class="arrow-go">→</span></a>
+</div>
+<button class="show-nav" type="button" onClick="{{toggle}}" aria-label="{{menuLabel}}" aria-expanded="{{open}}" style="background: #F1F5F9; border: 0; border-radius: 10px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="{{iconPath}}"></path></svg>
+</button>
+</nav>
+<sc-if value="{{open}}" hint-placeholder-val="{{ false }}">
+<div class="show-nav reveal" style="border-top: 1px solid #E2E8F0; padding: 12px 24px 24px; display: flex; flex-direction: column; background: #FFFFFF">
+<sc-for list="{{links}}" as="l" hint-placeholder-count="4">
+<a href="{{l.href}}" style="text-decoration: none; color: {{l.color}}; font-weight: 600; font-size: 20px; padding: 14px 0; border-bottom: 1px solid #F1F5F9">{{l.label}}</a>
+</sc-for>
+<a href="Contact.dc.html" style="margin-top: 20px; background: #2F5BEA; color: #FFFFFF; font-weight: 600; padding: 16px; border-radius: 12px; text-decoration: none; text-align: center">Demander un devis gratuit</a>
+</div>
+</sc-if>
+<div class="callbar" style="display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 70; gap: 10px">
+<a href="tel:+33631980368" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: #0F172A; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 15px; border-radius: 14px; text-decoration: none; box-shadow: 0 12px 30px rgba(15,23,42,0.3); min-height: 52px; box-sizing: border-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>Appeler</a>
+<a href="Contact.dc.html" style="flex: 1; display: flex; align-items: center; justify-content: center; background: #2F5BEA; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 15px; border-radius: 14px; text-decoration: none; box-shadow: 0 12px 30px rgba(47,91,234,0.35); min-height: 52px; box-sizing: border-box">Devis gratuit</a>
+</div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"current":{"editor":"enum","options":["accueil","offres","realisations","apropos","contact"],"default":"accueil"},"$preview":{"width":1280,"height":76}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false }; }
+  renderVals() {
+    const cur = this.props.current ?? 'accueil';
+    const defs = [
+      { id: 'offres', label: 'Offres', href: 'Offres.dc.html' },
+      { id: 'realisations', label: 'Réalisations', href: 'Realisations.dc.html' },
+      { id: 'apropos', label: 'À propos', href: 'APropos.dc.html' },
+      { id: 'contact', label: 'Contact', href: 'Contact.dc.html' }
+    ];
+    const open = this.state.open;
+    return {
+      open,
+      links: defs.map((d) => ({ ...d, color: d.id === cur ? '#2F5BEA' : '#334155', weight: d.id === cur ? 600 : 500 })),
+      menuLabel: open ? 'Fermer le menu' : 'Ouvrir le menu',
+      iconPath: open ? 'M6 6l12 12M18 6 6 18' : 'M4 7h16M4 12h16M4 17h16',
+      toggle: () => this.setState({ open: !open })
+    };
+  }
+}
+</script>
+</body>
+</html>

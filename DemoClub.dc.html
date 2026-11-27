@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Démo – FC Les Étoiles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+<link rel="stylesheet" href="./assets/3a651c1ec16219c23ceb9ee704067a24.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div style="background: #FFFFFF; color: #1F2937; font-family: Inter, system-ui, sans-serif; font-size: 18px; line-height: 1.7; overflow-x: hidden">
+<a href="Realisations.dc.html" style="display: block; background: #0F172A; color: #FFFFFF; text-align: center; font-size: 14px; font-weight: 600; padding: 10px 16px; text-decoration: none">Site de démonstration réalisé par LM Propel · club fictif · ← retour</a>
+
+<section style="background: #064E3B; color: #FFFFFF; position: relative; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 80px, transparent 80px 160px)"></div>
+<div aria-hidden="true" style="position: absolute; width: 420px; height: 420px; border: 3px solid rgba(255,255,255,0.12); border-radius: 50%; right: -120px; top: 40px"></div>
+<header style="position: relative; max-width: 1120px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<span style="display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: 0.02em; text-transform: uppercase"><svg width="40" height="44" viewBox="0 0 40 44" aria-hidden="true"><path d="M20 2 L37 8 V22 C37 33 29 40 20 42 C11 40 3 33 3 22 V8 Z" fill="#FACC15"></path><path d="M20 12 l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#064E3B"></path></svg>FC Les Étoiles</span>
+<nav style="display: flex; flex-wrap: wrap; gap: 8px 26px; font-size: 16px; font-weight: 500"><a href="#matchs" style="color: #FFFFFF; text-decoration: none">Matchs</a><a href="#equipes" style="color: #FFFFFF; text-decoration: none">Équipes</a><a href="#inscription" style="color: #FACC15; text-decoration: none; font-weight: 600">S'inscrire</a></nav>
+</header>
+<div style="position: relative; max-width: 1120px; margin: 0 auto; padding: clamp(40px, 8vw, 104px) 24px clamp(56px, 9vw, 120px)">
+<p class="reveal" style="color: #FACC15; font-weight: 600; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase">Saison 2026 – 2027</p>
+<h1 class="reveal d1" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; color: #FFFFFF; font-size: clamp(52px, 9vw, 112px); line-height: 0.95; text-transform: uppercase; margin-top: 14px; letter-spacing: 0">Un club,<br>une famille.</h1>
+<p class="reveal d2" style="margin-top: 22px; max-width: 520px; color: #D1FAE5">Du football pour tous, des U7 aux vétérans. Inscriptions ouvertes toute l'année.</p>
+<div class="reveal d3" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px">
+<a class="btn shine full-sm" href="#inscription" style="background: #FACC15; color: #064E3B; font-weight: 700; padding: 16px 30px; border-radius: 10px; text-decoration: none">Inscrire mon enfant</a>
+<a class="btn full-sm" href="#matchs" style="border: 1.5px solid #FFFFFF; color: #FFFFFF; font-weight: 600; padding: 16px 30px; border-radius: 10px; text-decoration: none">Prochains matchs</a>
+</div>
+</div>
+</section>
+
+<section id="matchs" style="max-width: 1120px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px">
+<h2 class="sr" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 52px); text-transform: uppercase; color: #064E3B">Prochains matchs</h2>
+<div style="margin-top: 36px; display: flex; flex-direction: column; gap: 14px">
+<sc-for list="{{matches}}" as="m" hint-placeholder-count="4">
+<div class="sr-zoom lift" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; border: 1px solid #E5E7EB; border-radius: 16px; padding: 18px 24px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; color: #064E3B; min-width: 90px">{{m.date}}</span>
+<span style="background: #ECFDF5; color: #065F46; font-size: 14px; font-weight: 600; padding: 4px 12px; border-radius: 999px">{{m.team}}</span>
+<span style="flex: 1 1 220px; font-weight: 600">{{m.vs}}</span>
+<span style="color: #4B5563; font-size: 16px">{{m.place}}</span>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="equipes" style="background: #F0FDF4">
+<div style="max-width: 1120px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px">
+<h2 class="sr" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 52px); text-transform: uppercase; color: #064E3B">Nos équipes</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; margin-top: 36px">
+<sc-for list="{{teams}}" as="t" hint-placeholder-count="6">
+<div class="tilt sr-zoom" style="background: #FFFFFF; border-radius: 18px; padding: 26px; border-top: 6px solid {{t.color}}">
+<p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 34px; color: #064E3B; line-height: 1">{{t.name}}</p>
+<p style="margin-top: 10px; color: #4B5563; font-size: 16px">{{t.info}}</p>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="inscription" style="max-width: 1120px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 1 1 340px; min-width: 0">
+<h2 class="sr" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 52px); text-transform: uppercase; color: #064E3B">Inscription en ligne</h2>
+<p class="sr" style="margin-top: 12px; color: #4B5563">Exemple d'automatisation : la demande arrive dans le tableau des licences du club, et le responsable de catégorie est prévenu par e-mail.</p>
+<div class="sr" style="margin-top: 24px; display: flex; flex-direction: column; gap: 10px">
+<p style="display: flex; justify-content: space-between; border-bottom: 1px solid #E5E7EB; padding: 10px 0"><span>Licence U7 à U13</span><strong>120 €</strong></p>
+<p style="display: flex; justify-content: space-between; border-bottom: 1px solid #E5E7EB; padding: 10px 0"><span>Licence U15 à U18</span><strong>140 €</strong></p>
+<p style="display: flex; justify-content: space-between; border-bottom: 1px solid #E5E7EB; padding: 10px 0"><span>Licence Seniors</span><strong>160 €</strong></p>
+</div>
+</div>
+<div class="sr" style="flex: 1 1 380px; min-width: 0; background: #064E3B; color: #FFFFFF; border-radius: 22px; padding: 32px">
+<sc-if value="{{done}}" hint-placeholder-val="{{ false }}">
+<div class="pop-big" style="text-align: center; padding: 30px 0"><p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; color: #FACC15; text-transform: uppercase">Bienvenue au club !</p><p style="margin-top: 8px; color: #D1FAE5">Demande enregistrée pour la catégorie {{cat}}. (démo)</p></div>
+</sc-if>
+<sc-if value="{{notDone}}" hint-placeholder-val="{{ true }}">
+<p style="font-weight: 600; font-size: 20px">Choisissez la catégorie</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="5">
+<button type="button" onClick="{{c.pick}}" aria-pressed="{{c.on}}" style="min-height: 46px; padding: 10px 18px; border-radius: 10px; border: 1.5px solid #FACC15; background: {{c.bg}}; color: {{c.fg}}; font-weight: 600; cursor: pointer">{{c.name}}</button>
+</sc-for>
+</div>
+<button class="btn shine" type="button" onClick="{{submit}}" style="margin-top: 26px; width: 100%; min-height: 54px; background: #FACC15; color: #064E3B; border: 0; border-radius: 10px; font-weight: 700; font-size: 17px; cursor: pointer">Envoyer la demande (démo)</button>
+</sc-if>
+</div>
+</section>
+
+<footer style="background: #022C22; color: #A7F3D0; text-align: center; padding: 36px 24px 100px; font-size: 14px">FC Les Étoiles est un club fictif. Site de démonstration créé par <a href="Main.dc.html" style="color: #FACC15; font-weight: 600">LM Propel</a>.</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":3200}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { cat: 'U11', done: false }; }
+  renderVals() {
+    const cat = this.state.cat;
+    return {
+      matches: [
+        { date: 'Sam. 6 déc.', team: 'Seniors A', vs: 'FC Les Étoiles – AS Vallée', place: 'Stade municipal, 15 h' },
+        { date: 'Sam. 6 déc.', team: 'U15', vs: 'US Plateau – FC Les Étoiles', place: 'Extérieur, 14 h' },
+        { date: 'Dim. 7 déc.', team: 'U11', vs: 'Plateau U11', place: 'Gymnase, 10 h' },
+        { date: 'Dim. 7 déc.', team: 'Vétérans', vs: 'FC Les Étoiles – ES Rivière', place: 'Stade municipal, 10 h' }
+      ],
+      teams: [
+        { name: 'U7 – U9', info: 'Mercredi 14 h · Éveil et plaisir du jeu', color: '#FACC15' },
+        { name: 'U11 – U13', info: 'Mercredi et vendredi · Plateaux le samedi', color: '#34D399' },
+        { name: 'U15 – U18', info: 'Trois entraînements par semaine', color: '#60A5FA' },
+        { name: 'Seniors', info: 'Deux équipes engagées en championnat', color: '#F87171' },
+        { name: 'Féminines', info: 'Nouvelle section, tous niveaux', color: '#C084FC' },
+        { name: 'Vétérans', info: 'Dimanche matin, ambiance garantie', color: '#FB923C' }
+      ],
+      cat, done: this.state.done, notDone: !this.state.done,
+      cats: ['U7', 'U9', 'U11', 'U13', 'U15', 'Seniors'].map((n) => ({ name: n, on: n === cat, bg: n === cat ? '#FACC15' : 'transparent', fg: n === cat ? '#064E3B' : '#FFFFFF', pick: () => this.setState({ cat: n }) })),
+      submit: () => this.setState({ done: true })
+    };
+  }
+}
+</script>
+</body>
+</html>
